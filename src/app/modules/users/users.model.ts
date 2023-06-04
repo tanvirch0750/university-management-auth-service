@@ -7,16 +7,16 @@ const userSchema = new Schema<IUser>(
   {
     id: {
       type: String,
-      required: true,
+      required: [true, 'A user must have a ID'],
       unique: true,
     },
     role: {
       type: String,
-      required: true,
+      required: [true, 'A user must have a role'],
     },
     password: {
       type: String,
-      required: true,
+      required: [true, 'A user must have a password'],
     },
   },
   {
