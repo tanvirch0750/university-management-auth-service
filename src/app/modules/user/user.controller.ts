@@ -4,7 +4,7 @@ import catchAsync from '../../../shared/catchAsync';
 import { createUserToDB } from './user.services';
 
 export const createUser: RequestHandler = catchAsync(async (req, res) => {
-  const { user } = req.body;
+  const user = req.body;
   const result = await createUserToDB(user);
 
   res.status(200).json({
