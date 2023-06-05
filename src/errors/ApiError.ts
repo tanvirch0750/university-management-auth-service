@@ -1,4 +1,4 @@
-import { IGenereicErrorMessage } from '../interfaces/error';
+import { IGenereicErrorMessage } from '../interfaces/errorMessage';
 
 class ApiError extends Error {
   statusCode: number;
@@ -15,7 +15,9 @@ class ApiError extends Error {
     super(message);
     this.statusCode = statusCode;
     this.isOperational = true;
-    this.errorMessages = errorMessages;
+    this.errorMessages = errorMessages.length
+      ? errorMessages
+      : [{ path: '', message: this.message }];
     this.status = `${statusCode}`.startsWith('4') ? 'fail' : 'error';
 
     if (stack) {

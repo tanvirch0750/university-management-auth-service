@@ -1,14 +1,10 @@
 import mongoose from 'mongoose';
-import { IGenereicErrorMessage } from '../interfaces/error';
+import { IGenereicErrorMessage } from '../interfaces/errorMessage';
 import ApiError from './ApiError';
 
 export const handleValidationErrorDB = (
   err: mongoose.Error.ValidationError
 ) => {
-  const errorsMsg = Object.values(err.errors).map(
-    (el: mongoose.Error.ValidatorError | mongoose.Error.CastError) => el.message
-  );
-
   const errorsObj: IGenereicErrorMessage[] = Object.values(err.errors).map(
     (el: mongoose.Error.ValidatorError | mongoose.Error.CastError) => {
       return {
@@ -18,6 +14,6 @@ export const handleValidationErrorDB = (
     }
   );
 
-  const message = `Invalid input data. ${errorsMsg.join('. ')}`;
+  const message = `Validation Error`;
   return new ApiError(message, 400, errorsObj);
 };
