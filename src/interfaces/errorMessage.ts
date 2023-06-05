@@ -1,4 +1,4 @@
 export type IGenereicErrorMessage = {
-  path: string | undefined;
+  path: string | number;
   message: string;
 };

@@ -1,6 +1,6 @@
 // currentyly this is not being used in any file
 
-import { IGenereicErrorMessage } from './error';
+import { IGenereicErrorMessage } from './errorMessage';
 
 export type IGenereicErrorResponse = {
   statusCode: number;

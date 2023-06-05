@@ -1,8 +1,9 @@
-import { Request, Response } from 'express';
-import catchAsync from '../../../shared/catchAsync';
-import { createUserToDB } from './users.services';
+import { RequestHandler } from 'express';
 
-export const createUser = catchAsync(async (req: Request, res: Response) => {
+import catchAsync from '../../../shared/catchAsync';
+import { createUserToDB } from './user.services';
+
+export const createUser: RequestHandler = catchAsync(async (req, res) => {
   const { user } = req.body;
   const result = await createUserToDB(user);
 
