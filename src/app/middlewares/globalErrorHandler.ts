@@ -1,12 +1,12 @@
 import { ErrorRequestHandler, Response } from 'express';
 import { ZodError } from 'zod';
-import config from '../config';
-import ApiError from '../errors/ApiError';
-import { handleCastErrorDB } from '../errors/handleCastErrorDB';
-import { handleDuplicateFieldsErrorDB } from '../errors/handleDuplicateFieldsErrorDB';
-import { handleValidationErrorDB } from '../errors/handleValidationErroDB';
-import { handleZodError } from '../errors/handleZodError';
-import { errorLogger } from '../shared/logger';
+import config from '../../config';
+import ApiError from '../../errors/ApiError';
+import { handleCastErrorDB } from '../../errors/handleCastErrorDB';
+import { handleDuplicateFieldsErrorDB } from '../../errors/handleDuplicateFieldsErrorDB';
+import { handleValidationErrorDB } from '../../errors/handleValidationErroDB';
+import { handleZodError } from '../../errors/handleZodError';
+import { errorLogger } from '../../shared/logger';
 
 const sendErrorToDev = (err: ApiError, res: Response) => {
   res.status(err.statusCode).json({

@@ -1,3 +1,4 @@
+import httpStatus from 'http-status';
 import { Schema, model } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
 import {
@@ -42,26 +43,20 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
   }
 );
 
-academicSemesterSchema.pre('validate', async function (next) {
-  try {
-    const existingSemester = await AcademicSemester.findOne({
-      _id: { $ne: this._id },
-      title: this.title,
-      year: this.year,
-      code: this.code,
-      startMonth: this.startMonth,
-      endMonth: this.endMonth,
-    });
+academicSemesterSchema.pre('save', async function (next) {
+  const existingSemester = await AcademicSemester.findOne({
+    title: this.title,
+    year: this.year,
+  });
 
-    if (existingSemester) {
-      const error = new ApiError('This semister already exist', 400);
-      return next(error);
-    }
-
-    next();
-  } catch (error: any) {
-    next(error);
+  if (existingSemester) {
+    const error = new ApiError(
+      'This academic semister already exist',
+      httpStatus.CONFLICT
+    );
+    return next(error);
   }
+  next();
 });
 
 const AcademicSemester = model<IAcademicSemester, AcademicSemesterModel>(
