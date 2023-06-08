@@ -154,6 +154,36 @@
             "date": 1686045705994,
             "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-06-16-success.log",
             "hash": "a58ee9a301510114d24497f2a6f999f3c3a53da1706021cc6c1469b6a46ebb14"
+        },
+        {
+            "date": 1686241832341,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-08-22-success.log",
+            "hash": "2d295f2e27f6b152cdd3ebafdf5247631b25aca081eb97a6326140ae3b5af175"
+        },
+        {
+            "date": 1686248187245,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-09-00-success.log",
+            "hash": "31154515c9c7df60afaaee5052bf5b149d73f8d1efd9fdf6c92abd3a488aa9e7"
+        },
+        {
+            "date": 1686251575572,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-09-01-success.log",
+            "hash": "b4db49a3510e861d5365ff3e0ddd27d10ec7b4d2c3b481db5a7d26a8d438eb25"
+        },
+        {
+            "date": 1686256275857,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-09-02-success.log",
+            "hash": "94e610a6647d4bb822b08137e7027aea311929a9c43a57ce6abbd8e5cf660149"
+        },
+        {
+            "date": 1686258413825,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-09-03-success.log",
+            "hash": "1c25f66a1d6ac202fcf9b80b575498c1b2a0b1cc4b251d481169ca2e8e3afadb"
+        },
+        {
+            "date": 1686262052615,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-09-04-success.log",
+            "hash": "47bc07f0b4180042a74bd167dd4649b3907944f51c95b3a21d0ddf7656f28667"
         }
     ],
     "hashType": "sha256"
