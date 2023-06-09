@@ -4,6 +4,7 @@ import ApiError from '../../../errors/ApiError';
 import { calculatePagination } from '../../../helpers/paginationHelper';
 import { IGenericPaginationResponse } from '../../../interfaces/genericPaginationResponse';
 import { IpaginationOptions } from '../../../interfaces/paginationOptions';
+import { findFilterConditions } from '../../../shared/findFilterConditions';
 import {
   academicSemesterSearchableFields,
   academicSemesterTitleCodeMapper,
@@ -31,26 +32,11 @@ const getAllAcademicSemestersFromDB = async (
 ): Promise<IGenericPaginationResponse<IAcademicSemester[]>> => {
   const { searchTerm, ...filtersData } = filters;
 
-  const andConditions = [];
-
-  if (searchTerm) {
-    andConditions.push({
-      $or: academicSemesterSearchableFields.map(field => ({
-        [field]: {
-          $regex: searchTerm,
-          $options: 'i',
-        },
-      })),
-    });
-  }
-
-  if (Object.keys(filtersData).length) {
-    andConditions.push({
-      $and: Object.entries(filtersData).map(([field, value]) => ({
-        [field]: value,
-      })),
-    });
-  }
+  const andConditions = findFilterConditions(
+    searchTerm,
+    filtersData,
+    academicSemesterSearchableFields
+  );
 
   const { page, limit, skip, sortBy, sortOrder } =
     calculatePagination(paginationOptions);
