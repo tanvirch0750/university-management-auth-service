@@ -1,6 +1,7 @@
 import express, { NextFunction, Request, Response } from 'express';
 import httpStatus from 'http-status';
 import ApiError from '../../errors/ApiError';
+import academicDepartmentRouters from '../modules/academicDepartment/academicDepartment.route';
 import academicFacultyRouters from '../modules/academicFaculty/academicFaculty.route';
 import academicSemesterRouters from '../modules/academicSemester/academicSemester.route';
 import userRouters from '../modules/user/user.route';
@@ -18,6 +19,10 @@ const moduleRoutes = [
   {
     path: '/academic-faculty',
     route: academicFacultyRouters,
+  },
+  {
+    path: '/academic-departments',
+    route: academicDepartmentRouters,
   },
 ];
 

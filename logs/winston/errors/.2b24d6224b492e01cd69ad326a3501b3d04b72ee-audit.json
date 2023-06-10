@@ -229,6 +229,21 @@
             "date": 1686387592043,
             "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-10-14-error.log",
             "hash": "87ef0b4ad5fc6b585541c5122f115a5945e7898d9780f1d4483ad1f2aba74667"
+        },
+        {
+            "date": 1686389682307,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-10-15-error.log",
+            "hash": "11bcaa45c597986a3af166ed49a4a5f68b36d69c9f3ee5c2b3f77b065b6900ce"
+        },
+        {
+            "date": 1686399190055,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-10-18-error.log",
+            "hash": "dd6cbe6d1047251a4b09f9b513cdc524979a5265e9257d2cae5a202070524fd9"
+        },
+        {
+            "date": 1686404371597,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-10-19-error.log",
+            "hash": "0094fcd48c8a32b53f97855817bc03930c7ca5a8c53c3497998b0d0f590f57ae"
         }
     ],
     "hashType": "sha256"
