@@ -1,3 +1,4 @@
+import { SortOrder } from 'mongoose';
 import { calculatePagination } from '../../../helpers/paginationHelper';
 import { IGenericPaginationResponse } from '../../../interfaces/genericPaginationResponse';
 import { IpaginationOptions } from '../../../interfaces/paginationOptions';
@@ -28,12 +29,20 @@ const getAllAcademicFacultiesFromDB = async (
     academicFacultySearchableFields
   );
 
-  const { page, limit, skip } = calculatePagination(paginationOptions);
+  const { page, limit, skip, sortBy, sortOrder } =
+    calculatePagination(paginationOptions);
 
   const whereConditions =
     andConditions.length > 0 ? { $and: andConditions } : {};
 
+  const sortConditions: { [key: string]: SortOrder } = {};
+
+  if (sortBy && sortOrder) {
+    sortConditions[sortBy] = sortOrder;
+  }
+
   const result = await AcademicFaculty.find(whereConditions)
+    .sort(sortConditions)
     .skip(skip)
     .limit(limit);
 
