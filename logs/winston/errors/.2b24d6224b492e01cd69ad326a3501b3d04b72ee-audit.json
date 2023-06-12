@@ -244,6 +244,36 @@
             "date": 1686404371597,
             "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-10-19-error.log",
             "hash": "0094fcd48c8a32b53f97855817bc03930c7ca5a8c53c3497998b0d0f590f57ae"
+        },
+        {
+            "date": 1686503461882,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-11-23-error.log",
+            "hash": "72eb6c3487943b3a92c520c9d95f64e3a81072910141d67b4b8d844b832776d9"
+        },
+        {
+            "date": 1686507692777,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-12-00-error.log",
+            "hash": "1895ab1721fb96a774c5fcf9f91b366d6fdc30b41b0b4aab89500f5fef3944fa"
+        },
+        {
+            "date": 1686561577177,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-12-15-error.log",
+            "hash": "87f1057394e265070d00cf70e5c2fff58293bd7ddefa686ccbcfdb4bdd9fe8f3"
+        },
+        {
+            "date": 1686569733676,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-12-17-error.log",
+            "hash": "bc8eaf0d1a28e7a48c8ecb277e37bc0b73387046ad2fbb127a0ceb42df356487"
+        },
+        {
+            "date": 1686574062993,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-12-18-error.log",
+            "hash": "162a62a8d6f94bab6c81731672a4c27e910aa79474ce289fdf687d9aa8831b83"
+        },
+        {
+            "date": 1686575291199,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\errors\\um-2023-06-12-19-error.log",
+            "hash": "c30cdfe3fcdee412e733a7afd084cf83f4bc29eef70cbc460002d8dcb1a580e3"
         }
     ],
     "hashType": "sha256"

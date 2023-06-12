@@ -49,7 +49,7 @@ const allErrors = (err: any) => {
   }
 
   if (err?.name === 'CastError') error = handleCastErrorDB(error);
-  if (err?.code === 11000) error = handleDuplicateFieldsErrorDB();
+  if (err?.code === 11000) error = handleDuplicateFieldsErrorDB(error);
   if (err?.name === 'ValidationError') {
     error = handleValidationErrorDB(error);
   }
