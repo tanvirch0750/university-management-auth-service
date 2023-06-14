@@ -319,6 +319,11 @@
             "date": 1686755666790,
             "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-14-21-success.log",
             "hash": "ba8d9943e9c7e580ce685f98a49a97852aa733e7a4a9ef208ba069cc8ff3fbe7"
+        },
+        {
+            "date": 1686764935972,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-14-23-success.log",
+            "hash": "f2a394328cd900c404565847c87ea95fb2335e51c5fd2831d1fc0a1f71a505bb"
         }
     ],
     "hashType": "sha256"
