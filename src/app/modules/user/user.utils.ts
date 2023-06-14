@@ -20,7 +20,7 @@ export const generateStudentId = async (
 
   incrementedId = `${academicSemester?.year.substring(2)}${
     academicSemester?.code
-  }${incrementedId}}`;
+  }${incrementedId}`;
 
   return incrementedId;
 };
