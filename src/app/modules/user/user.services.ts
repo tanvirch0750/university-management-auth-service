@@ -89,7 +89,6 @@ const createFacultyToDB = async (
   user.role = 'faculty';
 
   // generate Id
-
   // transaction and rollback
   let newUserAllData = null;
   const session = await mongoose.startSession();
