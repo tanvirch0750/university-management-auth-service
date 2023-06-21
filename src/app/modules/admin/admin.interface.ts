@@ -1,4 +1,5 @@
-import { Model, Schema } from 'mongoose';
+import { Model, Types } from 'mongoose';
+import { IManagementDepartment } from '../managementDepartment/managementDepartment.interface';
 
 export type Name = {
   firstName: string;
@@ -30,11 +31,7 @@ export type IAdmin = {
   permanentAddress: string;
   bloodGroup: IBloodGroup;
   designation: string;
-  managementDepartment: {
-    type: Schema.Types.ObjectId;
-    ref: 'Management Department';
-    required: true;
-  };
+  managementDepartment: Types.ObjectId | IManagementDepartment;
   profileImage: string;
 };
 

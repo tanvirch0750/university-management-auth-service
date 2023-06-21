@@ -6,7 +6,7 @@ import { updateFacultyZodSchema } from './faculty.validation';
 const router = express.Router();
 
 router.get('/:id', FacultyController.getSingleFaculty);
-//router.delete('/:id', StudentController.deleteStudent);
+router.delete('/:id', FacultyController.deleteFaculty);
 router.patch(
   '/:id',
   validateRequest(updateFacultyZodSchema),

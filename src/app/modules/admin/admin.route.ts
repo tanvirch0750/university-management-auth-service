@@ -6,7 +6,7 @@ import { updateAdminZodSchema } from './admin.validation';
 const router = express.Router();
 
 router.get('/:id', AdminController.getSingleAdmin);
-//router.delete('/:id', StudentController.deleteStudent);
+router.delete('/:id', AdminController.deleteAdmin);
 router.patch(
   '/:id',
   validateRequest(updateAdminZodSchema),

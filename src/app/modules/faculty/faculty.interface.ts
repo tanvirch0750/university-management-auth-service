@@ -1,4 +1,6 @@
-import { Model, Schema } from 'mongoose';
+import { Model, Types } from 'mongoose';
+import { IAcademicDepartment } from '../academicDepartment/academicDepartment.interfaces';
+import { IAcademicFaculty } from '../academicFaculty/academicFaculty.interfaces';
 
 export type Name = {
   firstName: string;
@@ -40,16 +42,8 @@ export type IFaculty = {
   permanentAddress: string;
   bloodGroup: IBloodGroup;
   designation: IDesignation;
-  academicFaculty: {
-    type: Schema.Types.ObjectId;
-    ref: 'Academic Faculty';
-    required: true;
-  };
-  academicDepartment: {
-    type: Schema.Types.ObjectId;
-    ref: 'Academic Department';
-    required: true;
-  };
+  academicFaculty: Types.ObjectId | IAcademicFaculty;
+  academicDepartment: Types.ObjectId | IAcademicDepartment;
   profileImage: string;
 };
 
