@@ -10,10 +10,10 @@ router.post(
   AuthController.loginUser
 );
 
-// router.post(
-//   '/refresh-token',
-//   validateRequest(AuthValidation.refreshTokenZodSchema),
-//   AuthController.refreshToken
-// );
+router.post(
+  '/refresh-token',
+  validateRequest(AuthValidation.refreshTokenZodSchema),
+  AuthController.refreshToken
+);
 
 export default router;
