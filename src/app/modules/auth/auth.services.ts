@@ -94,6 +94,9 @@ const changePassword = async (
 
   const isUserExist = await User.isUserExist(user?.userId);
 
+  // alternative way
+  //const isUserExist = await User.findOne({id: user?.userId}).select('+password')
+
   if (!isUserExist) {
     throw new ApiError('User does not exist', httpStatus.NOT_FOUND);
   }
@@ -118,6 +121,10 @@ const changePassword = async (
       passwordChangedAt: new Date(),
     }
   );
+
+  // alternative way
+  // isUserExist.needsPasswordChange = false;
+  // isUserExist.save();
 };
 
 export const AuthServices = {
