@@ -24,6 +24,9 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>(
       type: Boolean,
       default: true,
     },
+    passwordChangedAt: {
+      type: Date,
+    },
     student: {
       type: Schema.Types.ObjectId,
       ref: 'Student',
@@ -85,6 +88,8 @@ userSchema.statics.isPasswordMatched = async function (
 };
 
 userSchema.pre('save', async function (next) {
+  if (!this.isModified('password')) return next();
+
   // hash password
   const user = this;
   user.password = await bcrypt.hash(
