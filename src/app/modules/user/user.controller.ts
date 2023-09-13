@@ -2,17 +2,49 @@ import { RequestHandler } from 'express';
 import httpStatus from 'http-status';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
-import { createUserToDB } from './user.services';
+import { UserServices } from './user.services';
 
-export const createUser: RequestHandler = catchAsync(async (req, res) => {
-  const user = req.body;
-  const result = await createUserToDB(user);
+const createStudent: RequestHandler = catchAsync(async (req, res) => {
+  const { student, ...userData } = req.body;
+  const result = await UserServices.createStudentToDB(student, userData);
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
     status: 'success',
-    message: 'User created successfully',
+    message: 'Student created successfully',
     data: result,
   });
 });
+
+const createFaculty: RequestHandler = catchAsync(async (req, res) => {
+  const { faculty, ...userData } = req.body;
+  const result = await UserServices.createFacultyToDB(faculty, userData);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    status: 'success',
+    message: 'Faculty created successfully',
+    data: result,
+  });
+});
+
+const createAdmin: RequestHandler = catchAsync(async (req, res) => {
+  const { admin, ...userData } = req.body;
+  const result = await UserServices.createAdminToDB(admin, userData);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    status: 'success',
+    message: 'Admin created successfully',
+    data: result,
+  });
+});
+
+export const UserController = {
+  createStudent,
+  createFaculty,
+  createAdmin,
+};

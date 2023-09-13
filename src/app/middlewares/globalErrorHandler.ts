@@ -2,6 +2,7 @@ import { ErrorRequestHandler, Response } from 'express';
 import { ZodError } from 'zod';
 import config from '../../config';
 import ApiError from '../../errors/ApiError';
+import { handleBadValueError } from '../../errors/handleBadValueError';
 import { handleCastErrorDB } from '../../errors/handleCastErrorDB';
 import { handleDuplicateFieldsErrorDB } from '../../errors/handleDuplicateFieldsErrorDB';
 import { handleValidationErrorDB } from '../../errors/handleValidationErroDB';
@@ -40,6 +41,25 @@ const sendErrorToProd = (err: ApiError, res: Response) => {
   }
 };
 
+const allErrors = (err: any) => {
+  let error = { ...err };
+
+  if (err instanceof ZodError) {
+    error = handleZodError(error);
+  }
+
+  if (err?.name === 'CastError') error = handleCastErrorDB(error);
+  if (err?.code === 11000) error = handleDuplicateFieldsErrorDB(error);
+  if (err?.name === 'ValidationError') {
+    error = handleValidationErrorDB(error);
+  }
+  if (config.env === 'production') {
+    if (err?.code === 2) error = handleBadValueError();
+  }
+
+  return error;
+};
+
 const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
   if (config.env === 'development') {
     // eslint-disable-next-line no-console
@@ -52,11 +72,7 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
   err.status = err.status || 'error';
 
   if (config.env === 'development') {
-    let error = { ...err };
-
-    if (err instanceof ZodError) {
-      error = handleZodError(error);
-    }
+    const error = allErrors(err);
 
     if (err instanceof ApiError) {
       sendErrorToDev(err, res);
@@ -66,16 +82,7 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
       sendErrorToDev(error, res);
     }
   } else if (config.env === 'production') {
-    let error = { ...err };
-
-    if (err instanceof ZodError) {
-      error = handleZodError(error);
-    }
-    if (err?.name === 'CastError') error = handleCastErrorDB(error);
-    if (err?.code === 11000) error = handleDuplicateFieldsErrorDB(error);
-    if (err?.name === 'ValidationError') {
-      error = handleValidationErrorDB(error);
-    }
+    const error = allErrors(err);
 
     if (err instanceof ApiError) {
       sendErrorToProd(err, res);

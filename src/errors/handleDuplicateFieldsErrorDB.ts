@@ -1,14 +1,14 @@
-import { MongoError } from 'mongodb';
 import ApiError from './ApiError';
 
-export const handleDuplicateFieldsErrorDB = (err: MongoError) => {
-  const regex = /"(.*?)"/g;
-  const val = err?.errmsg?.match(regex)?.[0];
-
-  if (val) {
-    const message = `Duplicate filed value ${val}. Please use another value`;
-    return new ApiError(message, 400);
-  }
-
-  return null;
+export const handleDuplicateFieldsErrorDB = (err: any) => {
+  const path = Object?.keys(err?.keyValue)[0];
+  const value = Object?.values(err?.keyValue)[0];
+  const errorObj = [
+    {
+      path: path,
+      message: `Duplicate field ${path}, value: ${value}`,
+    },
+  ];
+  const message = `Duplicate ${path}`;
+  return new ApiError(message, 400, errorObj);
 };
