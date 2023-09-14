@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Server } from 'http';
 import mongoose from 'mongoose';
 import app from './app';
 import config from './config';
 import { errorLogger, logger } from './shared/logger';
+import { RedisClient } from './shared/redis';
 
 process.on('uncaughtException', err => {
   errorLogger.error(err);
@@ -13,6 +15,8 @@ let server: Server;
 
 async function bootstrap() {
   try {
+    await RedisClient.connect();
+
     await mongoose.connect(config.database_url as string);
     logger.info(`✅ database connected successfully`);
 

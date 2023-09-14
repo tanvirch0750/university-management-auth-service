@@ -6,84 +6,34 @@
     "auditLog": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\.ed2e387073cbdb734eadae1e753cbbb74320ffaf-audit.json",
     "files": [
         {
-            "date": 1687344410902,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-21-16-success.log",
-            "hash": "8f29d4e938f2c9dfbcb8b2a34f38d1059db8981f5ea236bf10a0adca595924e4"
+            "date": 1693997820517,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-09-06-16-success.log",
+            "hash": "784be349d0fa0514f6ad5b9756587008ae7651ecb11a2ca8f0ec8bf987d2485d"
         },
         {
-            "date": 1687345584048,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-21-17-success.log",
-            "hash": "8d312cddd464d0f0760e4e3ba2f061ed68aa7c406eb465c12b333c2e68619847"
+            "date": 1694639518702,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-09-14-03-success.log",
+            "hash": "8ca101233cadb2efb410303f057a2221fd76fcac021ee0e76a61169114213944"
         },
         {
-            "date": 1687349297250,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-21-18-success.log",
-            "hash": "b8270bd08921b57f8ddc2a05ec84e3f6317e0bfa528aed8363184405f2895e6e"
+            "date": 1694679731393,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-09-14-14-success.log",
+            "hash": "b3f0f1908a8f5a6642e9f3bfd5c2df1082cbf210dbd41e185a2cd150cfa5262a"
         },
         {
-            "date": 1687353222518,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-21-19-success.log",
-            "hash": "9840b69e0fcc5ccf336e79b0da83795dcd68e3d4393ebc8a219efbf290e45fb9"
+            "date": 1694682442971,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-09-14-15-success.log",
+            "hash": "5671a014f6ee1439c2dcb39c6e2a8234e80b7820ec0aa03532a0d73042458585"
         },
         {
-            "date": 1687358815086,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-21-20-success.log",
-            "hash": "cf41cfe32ec42e83a348fc4afec7cce1e6d93b5696452b25bd15f73e11e3a471"
+            "date": 1694686859119,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-09-14-16-success.log",
+            "hash": "80ff28a3f170ec53f9b80eb67f4898f6e321f26a57a9191cae9ee25ad032d20d"
         },
         {
-            "date": 1687360594747,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-21-21-success.log",
-            "hash": "4d9aafd99681dc3e2ee7d227422e7f0443277b85c7863612e9136ea49eeb8fb1"
-        },
-        {
-            "date": 1687375800653,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-22-01-success.log",
-            "hash": "3186a07573dd17c13d9a89cd5b26dfae1c29b18080cdfe3e67e51c5f230fb59f"
-        },
-        {
-            "date": 1687377618760,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-22-02-success.log",
-            "hash": "febb9d79244f3901c272489e1955db6aba12e80091265f35a2bdfa9fdac8fde7"
-        },
-        {
-            "date": 1687427008687,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-22-15-success.log",
-            "hash": "1ede46c9ad8fbfb98de0364b31b49a201666de10e693c7ed81406377e873f26f"
-        },
-        {
-            "date": 1687428586304,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-22-16-success.log",
-            "hash": "a7ebb8dd09374cd606650f245ecd185f2d1765909fe7c40c2db9743aff15d1ab"
-        },
-        {
-            "date": 1687432631726,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-22-17-success.log",
-            "hash": "eacfc4d5ff718bfffa6ca290e3be5d87ddfa506cbf9d0133dda30404591dbdeb"
-        },
-        {
-            "date": 1687435485674,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-22-18-success.log",
-            "hash": "9abde9b9eeb3f6015d3ec6f65180b2b4fefa049f5c9aa3b654549d0dd156540a"
-        },
-        {
-            "date": 1687440734287,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-06-22-19-success.log",
-            "hash": "1544ca171698da00496fb07f934ddc5bc7285f9c9cd304e3e1d664baf199facd"
-        },
-        {
-            "date": 1688444941430,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-07-04-10-success.log",
-            "hash": "d307f6c3b901192af5631ea8b054c87b61abb4f9ffbc7263a0f94bac215caacc"
-        },
-        {
-            "date": 1688446877814,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-07-04-11-success.log",
-            "hash": "cdd7f0893466c3a2b81f0903dc6e391b2bb0bb1dc42b28f9e8e0d068eac2ea85"
-        },
-        {
-            "date": 1688451520149,
-            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-07-04-12-success.log",
-            "hash": "aeb1e8dc58840bd039db757daf4dabda1bbbf900ac658fc9d5358b3308e42989"
+            "date": 1694689291752,
+            "name": "C:\\Users\\CHOWDHURY\\Desktop\\University Managemnt\\university-management-auth-service\\logs\\winston\\successes\\um-2023-09-14-17-success.log",
+            "hash": "8843986fbf7c6ea4ef277a8c86389af77bafd0418b8c19d77b80c3a6409f5473"
         }
     ],
     "hashType": "sha256"
