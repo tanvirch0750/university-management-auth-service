@@ -16,6 +16,11 @@ const academicDepartmentSchema = new Schema<IAcademicDepartment>(
       ref: 'Academic Faculty',
       required: true,
     },
+    syncId: {
+      type: String,
+      required: false,
+      unique: true,
+    },
   },
   {
     timestamps: true,

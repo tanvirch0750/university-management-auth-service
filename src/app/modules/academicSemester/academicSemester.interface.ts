@@ -26,8 +26,20 @@ export type IAcademicSemester = {
   title: ISemesterTitle;
   year: string;
   code: ISemesterCode;
+  isCurrent: boolean;
   startMonth: ISemesterMonthName;
   endMonth: ISemesterMonthName;
+  syncId: string;
+};
+
+export type IAcademicSemesterEvent = {
+  title: ISemesterTitle;
+  year: string;
+  code: ISemesterCode;
+  isCurrent: boolean;
+  startMonth: ISemesterMonthName;
+  endMonth: ISemesterMonthName;
+  id: string;
 };
 
 export type AcademicSemesterModel = Model<

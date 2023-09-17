@@ -6,7 +6,9 @@ import { findFilterConditions } from '../../../shared/findFilterConditions';
 import { academicFacultySearchableFields } from './academicFaculty.constant';
 import {
   IAcademicFaculty,
+  IAcademicFacultyCreatedEvent,
   IAcademicFacultyFilters,
+  IAcademicFacultyUpdatedEvent,
 } from './academicFaculty.interfaces';
 import AcademicFaculty from './academicFaculty.model';
 
@@ -85,10 +87,39 @@ const deleteAcademicFacultyFromDB = async (
   return result;
 };
 
+const insertIntoDBFromEvent = async (
+  e: IAcademicFacultyCreatedEvent
+): Promise<void> => {
+  await AcademicFaculty.create({
+    syncId: e.id,
+    title: e.title,
+  });
+};
+
+const updateOneInDBFromEvent = async (
+  e: IAcademicFacultyUpdatedEvent
+): Promise<void> => {
+  await AcademicFaculty.findOneAndUpdate(
+    { syncId: e.id },
+    {
+      $set: {
+        title: e.title,
+      },
+    }
+  );
+};
+
+const deleteOneFromDBFromEvent = async (syncId: string): Promise<void> => {
+  await AcademicFaculty.findOneAndDelete({ syncId });
+};
+
 export const AcademicFacultyServices = {
   createAcademicFacultyToDB,
   getAllAcademicFacultiesFromDB,
   getSingleAcademicFacultyFromDB,
   updateSingleAcademicFacultyToDB,
   deleteAcademicFacultyFromDB,
+  insertIntoDBFromEvent,
+  updateOneInDBFromEvent,
+  deleteOneFromDBFromEvent,
 };

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import httpStatus from 'http-status';
 import { SortOrder } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
@@ -11,6 +12,7 @@ import {
 } from './academicSemester.constant';
 import {
   IAcademicSemester,
+  IAcademicSemesterEvent,
   IAcademicSemesterFilters,
 } from './academicSemester.interface';
 import AcademicSemester from './academicSemesterModel';
@@ -101,10 +103,49 @@ const deleteAcademicSemesterFromDB = async (
   return result;
 };
 
+const createAcademicSemisterFromEventToDB = async (
+  e: IAcademicSemesterEvent
+): Promise<void> => {
+  await AcademicSemester.create({
+    title: e.title,
+    year: e.year,
+    code: e.code,
+    isCurrent: e.isCurrent,
+    startMonth: e.startMonth,
+    endMonth: e.endMonth,
+    syncId: e.id,
+  });
+};
+
+const updateAcademicSemisterFromEventToDB = async (
+  e: IAcademicSemesterEvent
+): Promise<void> => {
+  await AcademicSemester.findOneAndUpdate(
+    { syncId: e.id },
+    {
+      $set: {
+        title: e.title,
+        year: e.year,
+        code: e.code,
+        isCurrent: e.isCurrent,
+        startMonth: e.startMonth,
+        endMonth: e.endMonth,
+      },
+    }
+  );
+};
+
+const deleteOneFromDBFromEvent = async (syncId: string): Promise<void> => {
+  await AcademicSemester.findOneAndDelete({ syncId });
+};
+
 export const AcademicSemesterServices = {
   createAcademicSemisterToDB,
   getAllAcademicSemestersFromDB,
   getSingleAcademicSemisterFromDB,
   updateSingleAcademicSemisterToDB,
   deleteAcademicSemesterFromDB,
+  createAcademicSemisterFromEventToDB,
+  updateAcademicSemisterFromEventToDB,
+  deleteOneFromDBFromEvent,
 };
