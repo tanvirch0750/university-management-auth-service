@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import httpStatus from 'http-status';
 import mongoose, { SortOrder } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
@@ -5,8 +6,12 @@ import { calculatePagination } from '../../../helpers/paginationHelper';
 import { IGenericPaginationResponse } from '../../../interfaces/genericPaginationResponse';
 import { IpaginationOptions } from '../../../interfaces/paginationOptions';
 import { findFilterConditions } from '../../../shared/findFilterConditions';
+import { RedisClient } from '../../../shared/redis';
 import User from '../user/user.model';
-import { facultySearchableFields } from './faculty.constant';
+import {
+  EVENT_FACULTY_UPDATED,
+  facultySearchableFields,
+} from './faculty.constant';
 import { IFaculty, IFacultyFilters } from './faculty.interface';
 import { Faculty } from './faculty.model';
 
@@ -85,7 +90,12 @@ const updateFacultyToDB = async (
 
   const result = await Faculty.findOneAndUpdate({ id }, updatedFacultyData, {
     new: true,
-  });
+  })
+    .populate('academicFaculty')
+    .populate('academicDepartment');
+  if (result) {
+    await RedisClient.publish(EVENT_FACULTY_UPDATED, JSON.stringify(result));
+  }
   return result;
 };
 
