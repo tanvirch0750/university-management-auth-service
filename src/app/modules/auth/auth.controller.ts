@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { RequestHandler } from 'express';
 import httpStatus from 'http-status';
 import config from '../../../config';
@@ -24,7 +26,7 @@ const loginUser: RequestHandler = catchAsync(async (req, res) => {
     success: true,
     status: 'success',
     message: 'User logged in successfully',
-    data: others,
+    data: result,
   });
 });
 
